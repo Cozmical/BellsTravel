@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бүртгүүлэх Хуудас - Bell's Travel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eaf4fc;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #4CAF50;
+            padding: 1rem 2rem;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .left-section {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            background-color: #5FBF60;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #3F9F40;
+        }
+
+        .right-icons {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .icon-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .icon-placeholder {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: #ffcc80;
+            color: black;
+            font-size: 18px;
+            margin-bottom: 0.2rem;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .icon-placeholder:hover {
+            transform: scale(1.2);
+            background-color: #ffe4b3;
+        }
+
+        .icon-text {
+            font-size: 12px;
+            color: white;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .left-text {
+            max-width: 400px;
+            color: #333;
+        }
+
+        .left-text h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .left-text p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-container h1 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .social-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-button {
+            padding: 0.75rem;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .social-button:hover {
+            background-color: #f4f4f4;
+            border-color: #aaa;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-container input,
+        .form-container button {
+            padding: 0.75rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #3F9F40;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checkbox-container input {
+            width: 20px;
+            height: 20px;
+        }
+
+        .checkbox-container label {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .form-checkboxes {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1.5rem 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .trademark {
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        .language-selector {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .language-selector label {
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        .language-selector select {
+            background-color: #444;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .language-selector select:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="left-section">
+                <div class="logo">Bell's Travel</div>
+                <ul class="nav-links">
+                    <li><a href="#">Аялах Газрууд</a></li>
+                    <li><a href="#">Төлөвлөх</a></li>
+                    <li><a href="#">Хийсэн Захиалгууд</a></li>
+                </ul>
+            </div>
+            <div class="right-icons">
+                <div class="icon-container">
+                    <div class="icon-placeholder">🔍</div>
+                    <span class="icon-text">Search</span>
+                </div>
+                <div class="icon-container">
+                    <div class="icon-placeholder">💬</div>
+                    <span class="icon-text">Chat</span>
+                </div>
+                <div class="icon-container">
+                    <div class="icon-placeholder">📞</div>
+                    <span class="icon-text">Contact</span>
+                </div>
+                <div class="icon-container">
+                    <div class="icon-placeholder">👤</div>
+                    <span class="icon-text">Profile</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="left-text">
+            <h1>Bell's Travel</h1>
+            <p>
+                Дараагийн адал явдлаа мөрөөдөж байна уу? Bell's Travel бол сэтгэл хөдөлгөм газар, мартагдашгүй туршлага, хамгийн сайн аялалын саналыг олох найдвартай түнш юм.
+            </p>
+        </div>
+        <div class="form-container">
+            <h1>Бүртгүүлэх</h1>
+            <div class="social-buttons">
+                <div class="social-button">Continue with Google</div>
+                <div class="social-button">Continue with Facebook</div>
+            </div>
+            <span style="text-align: center; display: block; margin: 1rem 0;">OR</span>
+            <form>
+                <input type="email" placeholder="Имэйл хаяг" required>
+                <input type="password" placeholder="Нууц үг" required>
+                <input type="email" placeholder="Баталгаажуулах Имэйл Хаяг" required>
+                <div class="form-checkboxes">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="updates">
+                        <label for="updates">Мэдээлэл, шинэчлэлтүүд и-мейлээр хүлээн авах</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="not-robot">
+                        <label for="not-robot">Би бол Робот Биш</label>
+                    </div>
+                </div>
+                <button type="submit">Үргэлжлүүлэх</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="trademark">
+                <p>&copy; 2024 Bell's Travel. All rights reserved.</p>
+            </div>
+            <div class="language-selector">
+                <label for="language-select">Select Language:</label>
+                <select id="language-select">
+                    <option value="english" selected>English</option>
+                    <option value="russian">Russian</option>
+                    <option value="mongolian">Mongolian</option>
+                    <option value="german">German</option>
+                    <option value="french">French</option>
+                    <option value="korean">Korean</option>
+                    <option value="spanish">Spanish</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

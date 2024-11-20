@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Page - Bell's Travel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #4CAF50;
+            padding: 1rem 2rem;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .left-section {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            background-color: #5FBF60;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #3F9F40;
+        }
+
+        .right-icons {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .icon-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0.3rem;
+        }
+
+        .icon-placeholder {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: #ffcc80;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .icon-placeholder:hover {
+            transform: scale(1.1);
+            background-color: #ffe4b3;
+        }
+
+        .icon-text {
+            font-size: 0.9rem;
+            color: white;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            font-size: 1.5rem;
+            background-color: #fdfdfd;
+            border: 1px dashed #ccc;
+            margin: 2rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .trademark {
+            font-size: 0.9rem;
+            text-align: left;
+            flex: 1;
+        }
+
+        .language-selector {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            justify-content: flex-end;
+        }
+
+        .language-selector label {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .language-selector select {
+            background-color: #444;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .language-selector select:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="left-section">
+                <div class="logo">Bell's Travel</div>
+                <ul class="nav-links">
+                    <li><a href="#">Аялах Газрууд</a></li>
+                    <li><a href="#">Төлөвлөх</a></li>
+                    <li><a href="#">Хийсэн Захиалгууд</a></li>
+                </ul>
+            </div>
+            <div class="right-icons">
+                <div class="icon-container">
+                    <div class="icon-placeholder">🔍</div>
+                    <span class="icon-text">Search</span>
+                </div>
+                <div class="icon-container">
+                    <div class="icon-placeholder">💬</div>
+                    <span class="icon-text">Chat</span>
+                </div>
+                <div class="icon-container">
+                    <div class="icon-placeholder">📞</div>
+                    <span class="icon-text">Contact</span>
+                </div>
+                <div class="icon-container">
+                    <div class="icon-placeholder">👤</div>
+                    <span class="icon-text">Profile</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        Main content area: This is where page-specific content will load.
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="trademark">
+                <p>&copy; 2024 Bell's Travel. All rights reserved.</p>
+            </div>
+            <div class="language-selector">
+                <label for="language-select">Select Language:</label>
+                <select id="language-select">
+                    <option value="english" selected>English</option>
+                    <option value="russian">Russian</option>
+                    <option value="mongolian">Mongolian</option>
+                    <option value="german">German</option>
+                    <option value="french">French</option>
+                    <option value="korean">Korean</option>
+                    <option value="spanish">Spanish</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
