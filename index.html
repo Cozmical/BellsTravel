@@ -5,6 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Нүүр Хуудас - Bell's Travel</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Intro Section Improvements */
+        .intro-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+
+        .intro-section .left h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2d3748; /* Cleaner dark color */
+            margin-bottom: 10px;
+        }
+
+        .intro-section .left p {
+            font-size: 1.2rem;
+            color: #4a5568; /* Soft secondary text color */
+        }
+
+        .intro-section .right p {
+            font-size: 1.2rem;
+            color: #4a5568;
+            text-align: right;
+        }
+
+        .travel-options {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .travel-option {
+            text-align: center;
+            max-width: 30%;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .travel-option img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .travel-option.green img {
+            object-position: 0% 20%;
+        }
+
+        .travel-option.red img {
+            object-position: 0% 15%;
+        }
+
+        .travel-option.purple img {
+            object-position: 0% 20%;
+        }
+
+        .travel-option .text {
+            font-weight: bold;
+            margin-top: 10px;
+            color: white;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+
+        .video-section {
+            margin-top: 20px;
+            flex-grow: 1;
+            height: calc(100vh - 300px - 100px); /* Dynamically fills remaining space */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .video-section .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -50,20 +154,20 @@
         </div>
         <div class="travel-options">
             <div class="travel-option green">
+                <img src="images/AdalYvdaltAylal.jpg" alt="Адал Явдалт Аялал">
                 <div class="text">Адал Явдалт Аялал</div>
             </div>
             <div class="travel-option red">
+                <img src="images/GerBuliinAylal.jpg" alt="Гэр Бүлийн Аялал">
                 <div class="text">Гэр Бүлийн Аялал</div>
             </div>
             <div class="travel-option purple">
+                <img src="images/HosuudiinAylal.jpg" alt="Хосуудын Аялал">
                 <div class="text">Хосуудын Аялал</div>
             </div>
         </div>
         <div class="video-section">
-            <video autoplay muted loop>
-                <source src="scenery.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <img src="images/scenery.gif" alt="Байгалийн Үзэсгэлэнт Байдал">
             <div class="overlay">Байгалийн Үзэсгэлэнт Байдал</div>
         </div>
     </main>
